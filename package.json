@@ -1,0 +1,14 @@
+{
+  "name": "@capacitacion-cells/capacitacion-behavior",
+  "version": "1.0.0-rc.1",
+  "description": "",
+  "keywords": [],
+  "main": "capacitacion-behavior.js",
+  "dependencies": {
+    "@cells-components/cells-lit-helpers": "^1.0.0",
+    "lit-element": "^2.0.0"
+  },
+  "devDependencies": {
+    "@cells/cells-component-core": "^1.0.0"
+  }
+}
