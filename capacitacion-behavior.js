@@ -25,6 +25,33 @@ CellsBehaviors.capacitacionBehavior = (superClass) => class extends superClass {
   }
 
   /**
+    * Method to validate value is empty.
+    * @method isEmpty
+    * @param {Any} evaluate as value of evaluation
+    */
+  isEmpty(evaluate) {
+    return this._isEmpty(evaluate);
+  }
+
+  /**
+  * Method to validate value is empty.
+  * @method isEmpty
+  * @param {Any} evaluate as value of evaluation
+  */
+  _isEmpty(evaluate) {
+    switch (typeof (evaluate)) {
+      case 'object':
+        return evaluate === null || Object.keys(evaluate).length === 0;
+      case 'string':
+        return evaluate === '';
+      case 'undefined':
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  /**
   * Method to extract key with data.
   * @method extract
   * @param {Object} data as payload
